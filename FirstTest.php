@@ -3,8 +3,9 @@
 <meta charset="UTF-8">
 
 <header>
-    <title>Here is a Quick Test of PHP with Mysql</title>
-    </br>
+    <title>Mysql Test</title>
+    <h1>Here is a Quick Test of PHP with Mysql</h1>
+    <hr>
 </header>
 
 <body>
