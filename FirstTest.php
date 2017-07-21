@@ -10,14 +10,19 @@ if ($conn->connect_error){
     die("Connection failed: ". $conn->connect_error);
 }
 
-$sql = "SELECT * FROM *";
+$sql = "SELECT * FROM pet";
 
 $result = $conn->query($sql);
 
 if( $result->num_rows > 0) {
+    echo '<table style="width:100%">';
     
 while($row = $result->fetch_assoc()){
-    echo $row;
+    echo '<tr>';
+    echo '<th>'.$row[name].'</th>';
+    echo '<th>'.$row[owner].'</th>';
+    echo '<th>'.$row[species].'</th>';
+    echo '<th>'.$row[sex].'</th>';
 }
 } else {
     echo "0 results";
