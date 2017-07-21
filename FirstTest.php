@@ -1,4 +1,16 @@
-<?php
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+    <title>Here is a Quick Test of PHP with Mysql</title>
+    </br>
+</head>
+
+<body>
+
+    <div>
+        <?php
 $servername = "localhost";
 $username = "wordpressuser";
 $password = "Password?00";
@@ -15,20 +27,9 @@ $sql = "SELECT * FROM pet";
 $result = $conn->query($sql);
 
 if( $result->num_rows > 0) {
-    echo '<table style="width:20%">';
-    echo '<tr>';
-    echo '<th>name</th>';
-    echo '<th>owner</th>';
-    echo '<th>species</th>';
-    echo '<th>sex</th>';
-    echo '</tr>';
+    echo '<table style="width:20%">' . '<tr>' . '<th>name</th>' . '<th>owner</th>' . '<th>species</th>' . '<th>sex</th>' . '</tr>';
 while($row = $result->fetch_assoc()){
-    echo '<tr>';
-    echo '<th>' . $row[name] . '</th>';
-    echo '<th>' . $row[owner] . '</th>';
-    echo '<th>' . $row[species] . '</th>';
-    echo '<th>' . $row[sex] . '</th>';
-    echo '</tr>';
+    echo '<tr>' . '<th>' . $row[name] . '</th>' . '<th>' . $row[owner] . '</th>' . '<th>' . $row[species] . '</th>' . '<th>' . $row[sex] . '</th>' . '</tr>';
 }
 } else {
     echo "0 results";
@@ -36,3 +37,10 @@ while($row = $result->fetch_assoc()){
 
 $conn->close();
 ?>
+    </div>
+</body>
+<footer>
+    <p>Created by matthew</p>
+</footer>
+
+</html>
