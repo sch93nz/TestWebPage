@@ -15,12 +15,10 @@ $sql = "SELECT * FROM *";
 $result = $conn->query($sql);
 
 if( $result->num_rows > 0) {
-    echo '<table style="width:100%">';
-    echo '<tr>';
+    
 while($row = $result->fetch_assoc()){
-    echo '<th>'.$row.'<th>';
+    echo $row;
 }
-
 } else {
     echo "0 results";
 }
