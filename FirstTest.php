@@ -31,12 +31,14 @@
                 while($row = $result->fetch_assoc()){
                     echo '<tr>' . '<th>' . $row[name] . '</th>' . '<th>' . $row[owner] . '</th>' . '<th>' . $row[species] . '</th>' . '<th>' . $row[sex] . '</th>' . '</tr>';
                 }
+                echo '</table>';
             } else {
                 echo "0 results";
             }
 
             $conn->close();
             ?>
+
     </div>
     <div>
     <p>Created by matthew</p>
