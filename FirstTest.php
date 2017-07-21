@@ -38,9 +38,10 @@
             $conn->close();
             ?>
     </div>
-</body>
-<footer>
+    <div>
     <p>Created by matthew</p>
-</footer>
+    </div>
+</body>
+
 
 </html>
