@@ -1,5 +1,5 @@
 <?php
-$servername = "192.168.20.2";
+$servername = "localhost";
 $username = "wordpressuser";
 $password = "Password?00";
 $dbname = "wordpress";
