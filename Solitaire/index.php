@@ -28,6 +28,7 @@
         function offFunc(){
             echo '<h3>Button off Clicked</h3>'
         }
+        ?>
     </div>
     <div>
     <p>Created by matthew</p>
