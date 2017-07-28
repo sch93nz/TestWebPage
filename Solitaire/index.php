@@ -14,7 +14,7 @@
         <input type="submit" name="on" value="image">
         <input type="submit" name="off" value="off">
         <?php
-        require 'Cards.php';
+        include 'Cards.php';
             var $card = new Card("2","diamonds");
         if(isset($_POST['on'])){
             
