@@ -26,7 +26,7 @@
         }
 
         function offFunc(){
-            echo '<h3>Button off Clicked</h3>'
+            echo '<h3>Button off Clicked</h3>';
         }
         ?>
     </div>
