@@ -12,7 +12,7 @@
     <div>
         <form action="index.php" method="post">
         <input type="submit" name="on" value="on">
-        <input type="submit" name="off" value="on">
+        <input type="submit" name="off" value="off">
         <?php
         if(isset($_POST['on'])){
             onFunc();
