@@ -11,10 +11,13 @@
 <body>
     <div>
         <form action="index.php" method="post">
-        <input type="submit" name="on" value="on">
+        <input type="submit" name="on" value="image">
         <input type="submit" name="off" value="off">
         <?php
+        require 'Cards.php';
+            var $card = new Card("2","diamonds");
         if(isset($_POST['on'])){
+            
             onFunc();
         }
         if(isset($_POST['off'])){
@@ -22,7 +25,7 @@
         }
 
         function onFunc(){
-            echo '<h3>Button on Clicked</h3>';
+            echo '<img src="'$card->getCard()'">';
         }
 
         function offFunc(){
