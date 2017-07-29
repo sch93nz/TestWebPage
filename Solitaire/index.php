@@ -15,7 +15,7 @@
         <input type="submit" name="off" value="off">
         <?php
         include 'Cards.php';
-        var $card = new Card("2","diamonds");
+        $card = new Card("2","diamonds");
 
         if(isset($_POST['on'])){
             
@@ -26,7 +26,7 @@
         }
 
         function onFunc(){
-            $data = $card->getCard();
+            $data = $GLOBALS['card']->getCard();
             echo "<p> src=" . $data . "</p>\n";
         }
 
