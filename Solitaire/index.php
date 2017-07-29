@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <?php
+
 session_start();
+require 'Cards.php';
 $factory = new Deck();
 $deck = $factory -> getDeck();;
 
@@ -20,7 +22,7 @@ $deck = $factory -> getDeck();;
         <input type="submit" name="on" value="image">
         <input type="submit" name="off" value="off">
         <?php
-        include 'Cards.php';
+        
         $card = new Card("2","diamonds");
         $index = 0;
 
