@@ -30,6 +30,7 @@ if (!isset($_SESSION['Deck'])){
     <div>
         <form action="index.php" method="post">
         <input type="image" name="on" src="Cards/back_cards.png" value="deck" width=14% >
+        <input tyoe="button" name="restart" value="dead"
         <img <?php echo  onFunc();?> width=14% >
 
         <?php
@@ -37,7 +38,10 @@ if (!isset($_SESSION['Deck'])){
         if(isset($_POST['on'])=="image"){
             $_SESSION["Index"] = ($_SESSION["Index"]  + 1) % 52 ; 
         }
-
+        if(isset($_POST['restart']=="button")){
+            unset ( $_SESSION["Index"]);
+            unset ( $_SESSION["Deck"]);
+        }
         function onFunc(){
             $value = $_SESSION["Index"];
             $deck = $_SESSION['Deck'];
