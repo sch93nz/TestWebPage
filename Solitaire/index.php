@@ -29,15 +29,15 @@ if (!isset($_SESSION['Deck'])){
 <body>
     <div>
      <form action="index.php" method="post">
-     <input tyoe="button" name="restart" value="dead">
+     <input type="button" name="restart" value="dead">
      </form>
      </div>
     <div>
         <form action="index.php" method="post">
         <input type="image" name="on" src="Cards/back_cards.png" value="deck" width=14% >
-        </form>
+        
         <img <?php echo  onFunc();?> width=14% >
-
+        </form>
         <?php
 
         if(isset($_POST['on'])=="image"){
