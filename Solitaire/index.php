@@ -28,7 +28,9 @@ if (!isset($_SESSION['Deck'])){
 <body>
     <div>
         <form action="index.php" method="post">
-        <input type="submit" name="on" value="image">
+        <input type="image" name="on" src= <?php onFunc();?> >
+        
+        value="image">
         <?php
 
         if(isset($_POST['on'])){
@@ -37,7 +39,7 @@ if (!isset($_SESSION['Deck'])){
             $_SESSION["Index"] = ($_SESSION["Index"]  + 1) % 52 ; 
 
             echo "<p>the current card = " . $_SESSION["Index"]  . "</p>";
-            onFunc();
+            echo "<img" .  onFunc() . ">";
             unset($_POST['on']);
         }
 
@@ -53,12 +55,13 @@ if (!isset($_SESSION['Deck'])){
             $card = $deck[$value];
 
             $data =  $card -> getCard();
-            echo '<img src="' . $data . '">';
+            return 'src="' . $data . '"';
         }
 
         function offFunc(){
             echo '<h3>Button off Clicked</h3>';
         }
+
         ?>
     </div>
     <div>
