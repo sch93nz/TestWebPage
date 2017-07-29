@@ -13,6 +13,7 @@ if (!isset($_SESSION['Deck'])){
     $factory = new Deck();
     $deck = $factory -> getDeck();
     shuffle($deck);
+    shuffle($deck);
     $_SESSION["Deck"] = $deck;
 
 
@@ -36,6 +37,14 @@ if (!isset($_SESSION['Deck'])){
              value="deck" width=14% >
             <img <?php echo  onFunc();?> width=14% >
             <img src="Cards/Empty.png" width=14% >
+            <img src="Cards/blank.png" width=14% >
+            <img src="Cards/blank.png" width=14% >
+            <img src="Cards/blank.png" width=14% >
+            <img src="Cards/blank.png" width=14% >
+            </br>
+            <img src="Cards/blank.png" width=14% >
+            <img src="Cards/blank.png" width=14% >
+            <img src="Cards/blank.png" width=14% >
             <img src="Cards/blank.png" width=14% >
             <img src="Cards/blank.png" width=14% >
             <img src="Cards/blank.png" width=14% >
