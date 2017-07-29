@@ -5,13 +5,14 @@ session_start();
 
 require 'Cards.php';
 
-if (isset($_SESSION['Index'])){
+if (!isset($_SESSION['Index'])){
     $_SESSION["Index"] = 0;
-}
-if (isset($_SESSION['Deck'])){
+} 
+
+if (!isset($_SESSION['Deck'])){
     $factory = new Deck();
     $_SESSION["Deck"] = $factory -> getDeck();
-}
+} 
 
 ?>
 
@@ -32,7 +33,10 @@ if (isset($_SESSION['Deck'])){
 
         if(isset($_POST['on'])){
             echo "<p>the card was = " . $_SESSION["Index"]  . "</p>";
-            $_SESSION["Index"] = ($_SESSION["Index"]  + 1) % 52; 
+
+            $_SESSION["Index"] = ($_SESSION["Index"]  + 1) % 52 ; 
+            $_SESSION["Index"] = ($_SESSION["Index"]  + 1) % 52 ; 
+            
             echo "<p>the current card = " . $_SESSION["Index"]  . "</p>";
             onFunc();
         }
