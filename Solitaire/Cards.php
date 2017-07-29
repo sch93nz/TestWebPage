@@ -9,7 +9,7 @@
         }
 
         function getCard(){
-        return "Cards\/" . num . "_of_" . suit . ".png";
+        return "Cards/" . $this->num . "_of_" . $this->suit . ".png";
         }
 
 
