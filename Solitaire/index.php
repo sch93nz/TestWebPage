@@ -40,11 +40,11 @@ if (!isset($_SESSION['Deck'])){
         </form>
         <?php
 
-        if(isset($_POST['on'])=="image"){
+        if(isset($_POST['on'])){
             $_SESSION["Index"] = ($_SESSION["Index"]  + 1) % 52 ; 
         }
 
-        if(isset($_POST['restart'])=="dead"){
+        if(isset($_POST['restart'])){
             unset ( $_SESSION["Index"]);
             unset ( $_SESSION["Deck"]);
             echo Dead;
