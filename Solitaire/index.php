@@ -26,7 +26,7 @@ $deck = $factory -> getDeck();;
         $card = new Card("2","diamonds");
         $index = 0;
 
-        if(isset($_POST['on'])){
+        if(isset($_POST['image'])){
             $GLOBALS['index'] = $GLOBALS['index'] + 1 % 52; 
             echo "<p>" . $GLOBALS['index'] . "</p>";
             onFunc();
