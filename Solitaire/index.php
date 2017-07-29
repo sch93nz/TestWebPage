@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <?php
 
+require 'Cards.php';
 session_start();
 
-require 'Cards.php';
 
 if (!isset($_SESSION['Index'])){
     $_SESSION["Index"] = 0;
