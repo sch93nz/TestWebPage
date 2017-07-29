@@ -46,7 +46,6 @@ if (!isset($_SESSION['Deck'])){
         }
 
         function onFunc(){
-            echo $_SESSION["Index"];
             $value = $_SESSION["Index"];
             $deck = $_SESSION['Deck'];
 
