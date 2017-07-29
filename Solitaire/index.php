@@ -26,7 +26,7 @@
         }
 
         function onFunc(){
-            echo '<!img src="' . $card->getCard() . '"/>';
+            echo <img src= . $card->getCard() . />;
         }
 
         function offFunc(){
