@@ -15,7 +15,7 @@
         <input type="submit" name="off" value="off">
         <?php
         include 'Cards.php';
-        $card = new Card("2","diamonds");
+        var $card = new Card("2","diamonds");
 
         if(isset($_POST['on'])){
             
