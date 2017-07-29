@@ -46,7 +46,9 @@ if (!isset($_SESSION['Deck'])){
         }
 
         function onFunc(){
-            $data = $_SESSION['Deck'][ $_SESSION["Index"] ] -> getCard();
+            echo $_SESSION["Index"];
+            $value = $_SESSION["Index"];
+            $data = $_SESSION['Deck'][ $value ] -> getCard();
             echo '<img src="' . $data . '">';
         }
 
