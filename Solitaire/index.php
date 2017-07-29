@@ -27,7 +27,8 @@ $deck = $factory -> getDeck();;
         $index = 0;
 
         if(isset($_POST['on'])){
-            $GLOBALS['index']= $GLOBALS['index'] + 1 % 52; 
+            $GLOBALS['index'] = $GLOBALS['index'] + 1 % 52; 
+            echo "<p>" . $GLOBALS['index'] . "</p>";
             onFunc();
         }
 
@@ -37,6 +38,7 @@ $deck = $factory -> getDeck();;
 
         function onFunc(){
             $data = $GLOBALS['deck'][$GLOBALS['index']]->getCard();
+
             echo '<img src="' . $data . '">';
         }
 
