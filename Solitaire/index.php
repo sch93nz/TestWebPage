@@ -39,6 +39,7 @@ if (!isset($_SESSION['Deck'])){
             <img <?php echo  onFunc();?> width=14% >
             <img <?php echo  onFunc();?> width=14% >
             <img <?php echo  onFunc();?> width=14% >
+            <img <?php echo  onFunc();?> width=14% >
         </form>
         <?php
 
