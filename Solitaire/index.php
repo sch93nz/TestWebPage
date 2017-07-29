@@ -32,12 +32,12 @@ if (!isset($_SESSION['Deck'])){
         <?php
 
         if(isset($_POST['on'])){
+            echo $_POST['on']
             echo "<p>the card was = " . $_SESSION["Index"]  . "</p>";
 
             $_SESSION["Index"] = ($_SESSION["Index"]  + 1) % 52 ; 
 
             echo "<p>the current card = " . $_SESSION["Index"]  . "</p>";
-            echo "<img " .  onFunc() . " >";
             unset($_POST['on']);
         }
 
