@@ -47,6 +47,7 @@ if (!isset($_SESSION['Deck'])){
         if(isset($_POST['restart'])=="button"){
             unset ( $_SESSION["Index"]);
             unset ( $_SESSION["Deck"]);
+            echo Dead;
         }
         function onFunc(){
             $value = $_SESSION["Index"];
