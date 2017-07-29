@@ -34,21 +34,21 @@ if (!isset($_SESSION['Deck'])){
     <div>
         <form action="index.php" method="post">
             <input type="image" name="on" src="Cards/back_cards.png"
-             value="deck" width=10% >
-            <img <?php echo  onFunc();?> width=10% >
-            <img src="Cards/Empty.png" width=10% >
-            <img src="Cards/blank.png" width=10% >
-            <img src="Cards/blank.png" width=10% >
-            <img src="Cards/blank.png" width=10% >
-            <img src="Cards/blank.png" width=10% >
+             value="deck" width=13% >
+            <img <?php echo  onFunc();?> width=13% >
+            <img src="Cards/Empty.png" width=13% >
+            <img src="Cards/blank.png" width=13% >
+            <img src="Cards/blank.png" width=13% >
+            <img src="Cards/blank.png" width=13% >
+            <img src="Cards/blank.png" width=13% >
             </br>
-            <img src="Cards/blank.png" width=10% >
-            <img src="Cards/blank.png" width=10% >
-            <img src="Cards/blank.png" width=10% >
-            <img src="Cards/blank.png" width=10% >
-            <img src="Cards/blank.png" width=10% >
-            <img src="Cards/blank.png" width=10% >
-            <img src="Cards/blank.png" width=10% >
+            <img src="Cards/blank.png" width=13% >
+            <img src="Cards/blank.png" width=13% >
+            <img src="Cards/blank.png" width=13% >
+            <img src="Cards/blank.png" width=13% >
+            <img src="Cards/blank.png" width=13% >
+            <img src="Cards/blank.png" width=13% >
+            <img src="Cards/blank.png" width=13% >
         </form>
         <?php
 
