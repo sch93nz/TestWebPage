@@ -27,11 +27,12 @@ if (!isset($_SESSION['Deck'])){
 </header>
 
 <body>
+    <div> <input tyoe="button" name="restart" value="dead"></div>
     <div>
         <form action="index.php" method="post">
         <input type="image" name="on" src="Cards/back_cards.png" value="deck" width=14% >
-        <input tyoe="button" name="restart" value="dead"
         <img <?php echo  onFunc();?> width=14% >
+
 
         <?php
 
