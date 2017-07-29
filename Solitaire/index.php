@@ -11,8 +11,10 @@ if (!isset($_SESSION['Index'])){
 
 if (!isset($_SESSION['Deck'])){
     $factory = new Deck();
-    shuffle($factory);
-    $_SESSION["Deck"] = $factory -> getDeck();
+    $deck = $factory -> getDeck();
+    shuffle($deck);
+
+    $_SESSION["Deck"] = $deck;
 } 
 
 ?>
@@ -45,7 +47,6 @@ if (!isset($_SESSION['Deck'])){
         }
 
         if(isset($_POST['restart'])){
-            echo Dead;
             unset ( $_SESSION["Index"]);
             unset ( $_SESSION["Deck"]);
             session_destroy();
