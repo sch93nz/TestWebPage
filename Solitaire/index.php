@@ -35,10 +35,10 @@ if (!isset($_SESSION['Deck'])){
             echo "<p>the card was = " . $_SESSION["Index"]  . "</p>";
 
             $_SESSION["Index"] = ($_SESSION["Index"]  + 1) % 52 ; 
-            $_SESSION["Index"] = ($_SESSION["Index"]  + 1) % 52 ; 
-            
+
             echo "<p>the current card = " . $_SESSION["Index"]  . "</p>";
             onFunc();
+            unset($_POST['on']);
         }
 
         if(isset($_POST['off'])){
@@ -46,8 +46,7 @@ if (!isset($_SESSION['Deck'])){
         }
 
         function onFunc(){
-            $data = $_SESSION['deck'][ $_SESSION["Index"] ]->getCard();
-
+            $data = $_SESSION['Deck'][ $_SESSION["Index"] ] -> getCard();
             echo '<img src="' . $data . '">';
         }
 
