@@ -47,6 +47,7 @@ if (!isset($_SESSION['Deck'])){
         if(isset($_POST['restart'])){
             unset ( $_SESSION["Index"]);
             unset ( $_SESSION["Deck"]);
+            session_destroy();
             echo Dead;
         }
         function onFunc(){
