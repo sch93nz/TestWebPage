@@ -27,7 +27,7 @@
 
         function onFunc(){
             $data = $GLOBALS['card']->getCard();
-            echo '<p> src="' . $data . '"</p>\n';
+            echo '<img src="' . $data . '">';
         }
 
         function offFunc(){
