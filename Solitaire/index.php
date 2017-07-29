@@ -31,14 +31,12 @@ if (!isset($_SESSION['Deck'])){
         <input type="image" name="on" <?php echo  onFunc();?> value="image">
         <?php
 
-        if(isset($_POST['on'])){
+        if(isset($_POST['on'])=="image"){
             echo "<p>" . $_POST['on'] . "</p>";
             echo "<p>the card was = " . $_SESSION["Index"]  . "</p>";
-
             $_SESSION["Index"] = ($_SESSION["Index"]  + 1) % 52 ; 
-
             echo "<p>the current card = " . $_SESSION["Index"]  . "</p>";
-            unset($_POST['on']);
+            $_POST['on']=="no";
         }
 
         if(isset($_POST['off'])){
