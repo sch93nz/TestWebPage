@@ -28,15 +28,15 @@ if (!isset($_SESSION['Deck'])){
 
 <body>
     <div>
-        <form action="index.php" method="post">
-            <input type="button" name="restart" value="dead">
+        <form action="/index.php" method="post">
+            <input type="submit" name="restart" value="dead">
         </form>
     </div>
     <div>
-        <form action="index.php" method="post">
-        <input type="image" name="on" src="Cards/back_cards.png" value="deck" width=14% >
-        
-        <img <?php echo  onFunc();?> width=14% >
+        <form action="/index.php" method="post">
+            <input type="image" name="on" src="Cards/back_cards.png"
+             value="deck" width=14% >
+            <img <?php echo  onFunc();?> width=14% >
         </form>
         <?php
 
@@ -45,10 +45,11 @@ if (!isset($_SESSION['Deck'])){
         }
 
         if(isset($_POST['restart'])){
+            echo Dead;
             unset ( $_SESSION["Index"]);
             unset ( $_SESSION["Deck"]);
             session_destroy();
-            echo Dead;
+            
         }
         function onFunc(){
             $value = $_SESSION["Index"];
