@@ -15,7 +15,8 @@
         <input type="submit" name="off" value="off">
         <?php
         include 'Cards.php';
-            var $card = new Card("2","diamonds");
+        $card = new Card("2","diamonds");
+
         if(isset($_POST['on'])){
             
             onFunc();
@@ -25,7 +26,7 @@
         }
 
         function onFunc(){
-            echo '<img src="'$card->getCard()'">';
+            echo '<img src="' . $card->getCard() . '">';
         }
 
         function offFunc(){
