@@ -28,7 +28,8 @@ if (!isset($_SESSION['Deck'])){
 <body>
     <div>
         <form action="index.php" method="post">
-        <input type="image" name="on" <?php echo  onFunc();?> value="image">
+        <input type="image" name="on" <?php echo  onFunc();?> value="deck" width=20% >
+        
         <?php
 
         if(isset($_POST['on'])=="image"){
