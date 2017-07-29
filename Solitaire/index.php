@@ -37,6 +37,7 @@ if (!isset($_SESSION['Deck'])){
             $_SESSION["Index"] = ($_SESSION["Index"]  + 1) % 52 ; 
             echo "<p>the current card = " . $_SESSION["Index"]  . "</p>";
             $_POST['on']=="no";
+            echo "<p>" . $_POST['on'] . "</p>";
         }
 
         if(isset($_POST['off'])){
