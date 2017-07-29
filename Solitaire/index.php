@@ -28,7 +28,7 @@ if (!isset($_SESSION['Deck'])){
 <body>
     <div>
         <form action="index.php" method="post">
-        <input type="image" name="on" src= <?php onFunc();?> >
+        <input type="image" name="on" <?php onFunc();?> >
         
         value="image">
         <?php
