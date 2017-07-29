@@ -35,7 +35,7 @@ if (!isset($_SESSION['Deck'])){
             <input type="image" name="on" src="Cards/back_cards.png"
              value="deck" width=14% >
             <img <?php echo  onFunc();?> width=14% >
-            <img src="Cards/blank.png"width=14% >
+            <img src="Cards/blank.png" width=14% >
             <img <?php echo  onFunc();?> width=14% >
             <img <?php echo  onFunc();?> width=14% >
             <img <?php echo  onFunc();?> width=14% >
