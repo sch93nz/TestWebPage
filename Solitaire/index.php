@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <?php
-
-session_start();
+$index = 0;
 require 'Cards.php';
 $factory = new Deck();
-$deck = $factory -> getDeck();;
+$deck = $factory -> getDeck();
+
+session_start();
+
 
 ?>
 <html>
@@ -22,12 +24,12 @@ $deck = $factory -> getDeck();;
         <input type="submit" name="on" value="image">
         <input type="submit" name="off" value="off">
         <?php
-        $index = 0;
+        
 
         if(isset($_POST['on'])){
-            echo "<p>the was card=" . $GLOBALS['index'] . "</p>";
+            echo "<p>the card was = " . $GLOBALS['index'] . "</p>";
             $GLOBALS['index'] = $GLOBALS['index'] + 1 % 52; 
-            echo "<p>the current card=" . $GLOBALS['index'] . "</p>";
+            echo "<p>the current card = " . $GLOBALS['index'] . "</p>";
             onFunc();
         }
 
