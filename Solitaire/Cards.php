@@ -1,7 +1,7 @@
 <?php 
     class card {
-        $var num;
-        $var suit;
+        var $num;
+        var $suit;
 
         function __construct($num,$suit){
             $this->num = $num;
