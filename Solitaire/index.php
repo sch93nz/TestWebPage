@@ -28,10 +28,10 @@ if (!isset($_SESSION['Deck'])){
 
 <body>
     <div>
-     <form action="index.php" method="post">
-     <input type="button" name="restart" value="dead">
-     </form>
-     </div>
+        <form action="index.php" method="post">
+            <input type="button" name="restart" value="dead">
+        </form>
+    </div>
     <div>
         <form action="index.php" method="post">
         <input type="image" name="on" src="Cards/back_cards.png" value="deck" width=14% >
