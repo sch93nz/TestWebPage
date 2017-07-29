@@ -30,7 +30,7 @@
                 new Card("9","clubs"),new Card("10","clubs"),
                 new Card("jack","clubs"),new Card("queen","clubs"),
                 new Card("king","clubs")
-        return $deck
+        return $deck;
         }
 
     }
