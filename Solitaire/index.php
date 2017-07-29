@@ -44,7 +44,7 @@ if (!isset($_SESSION['Deck'])){
             $_SESSION["Index"] = ($_SESSION["Index"]  + 1) % 52 ; 
         }
 
-        if(isset($_POST['restart'])=="button"){
+        if(isset($_POST['restart'])=="dead"){
             unset ( $_SESSION["Index"]);
             unset ( $_SESSION["Deck"]);
             echo Dead;
