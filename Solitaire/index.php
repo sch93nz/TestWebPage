@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <?php
 session_start();
+$factory = new Deck();
+$deck = $factory -> getDeck();;
 
-$deck = new Deck()->getDeck();
 ?>
 <html>
 <meta charset="UTF-8">
