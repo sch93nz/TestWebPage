@@ -22,13 +22,12 @@ $deck = $factory -> getDeck();;
         <input type="submit" name="on" value="image">
         <input type="submit" name="off" value="off">
         <?php
-        
-        $card = new Card("2","diamonds");
         $index = 0;
 
         if(isset($_POST['on'])){
+            echo "<p>the was card=" . $GLOBALS['index'] . "</p>";
             $GLOBALS['index'] = $GLOBALS['index'] + 1 % 52; 
-            echo "<p>" . $GLOBALS['index'] . "</p>";
+            echo "<p>the current card=" . $GLOBALS['index'] . "</p>";
             onFunc();
         }
 
