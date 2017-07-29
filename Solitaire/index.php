@@ -15,8 +15,6 @@ if (!isset($_SESSION['Deck'])){
     shuffle($deck);
     shuffle($deck);
     $_SESSION["Deck"] = $deck;
-
-
 } 
 
 ?>
