@@ -2,18 +2,24 @@
 <?php
 
 session_start();
-$_SESSION["Index"] = 0;
-require 'Cards.php';
-$factory = new Deck();
-$deck = $factory -> getDeck();
 
+require 'Cards.php';
+
+if (isset($_SESSION['Index'])){
+    $_SESSION["Index"] = 0;
+}
+if (isset($_SESSION['Deck'])){
+    $factory = new Deck();
+    $_SESSION["Deck"] = $factory -> getDeck();
+}
 
 ?>
+
 <html>
 <meta charset="UTF-8">
 
 <header>
-    <title>Matthew's Solitaire</title>
+    <title>"Matthew's Solitaire"</title>
     <h1>Solitaire</h1>
     <hr>
 </header>
@@ -26,7 +32,7 @@ $deck = $factory -> getDeck();
 
         if(isset($_POST['on'])){
             echo "<p>the card was = " . $_SESSION["Index"]  . "</p>";
-            $_SESSION["Index"] = $_SESSION["Index"]  + 1 % 52; 
+            $_SESSION["Index"] = ($_SESSION["Index"]  + 1) % 52; 
             echo "<p>the current card = " . $_SESSION["Index"]  . "</p>";
             onFunc();
         }
@@ -36,7 +42,7 @@ $deck = $factory -> getDeck();
         }
 
         function onFunc(){
-            $data = $GLOBALS['deck'][$_SESSION["Index"] ]->getCard();
+            $data = $_SESSION['deck'][$_SESSION["Index"] ]->getCard();
 
             echo '<img src="' . $data . '">';
         }
