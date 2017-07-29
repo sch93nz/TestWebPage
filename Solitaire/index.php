@@ -27,7 +27,7 @@
 
         function onFunc(){
             $data = $card.getCard();
-            echo "<p> src=" $data "</p>";
+            echo "<p> src=" . $data . "</p>\n";
         }
 
         function offFunc(){
