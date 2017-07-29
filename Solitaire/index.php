@@ -13,8 +13,9 @@ if (!isset($_SESSION['Deck'])){
     $factory = new Deck();
     $deck = $factory -> getDeck();
     shuffle($deck);
-
     $_SESSION["Deck"] = $deck;
+
+
 } 
 
 ?>
@@ -31,13 +32,12 @@ if (!isset($_SESSION['Deck'])){
 <body>
     <div>
         <form action="index.php" method="post">
-            <input type="submit" name="restart" value="dead">
-        </form>
-    </div>
-    <div>
-        <form action="index.php" method="post">
             <input type="image" name="on" src="Cards/back_cards.png"
              value="deck" width=14% >
+            <img <?php echo  onFunc();?> width=14% >
+            <img src="Cards/blank.png"width=14% >
+            <img <?php echo  onFunc();?> width=14% >
+            <img <?php echo  onFunc();?> width=14% >
             <img <?php echo  onFunc();?> width=14% >
         </form>
         <?php
