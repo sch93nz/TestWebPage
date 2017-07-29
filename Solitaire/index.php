@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+session_start();
+
+$deck = new Deck()->getDeck();
+?>
 <html>
 <meta charset="UTF-8">
 
@@ -16,17 +21,19 @@
         <?php
         include 'Cards.php';
         $card = new Card("2","diamonds");
+        $index = 0;
 
         if(isset($_POST['on'])){
-            
+            $GLOBALS['index']= $GLOBALS['index'] + 1 % 52; 
             onFunc();
         }
+
         if(isset($_POST['off'])){
             offFunc();
         }
 
         function onFunc(){
-            $data = $GLOBALS['card']->getCard();
+            $data = $GLOBALS['deck'][$GLOBALS['index']]->getCard();
             echo '<img src="' . $data . '">';
         }
 
